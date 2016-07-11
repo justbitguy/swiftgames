@@ -8,6 +8,7 @@
 		<link rel="icon" href="icon.png">
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<link rel="stylesheet" href="style/fa/css/font-awesome.min.css">
+		<script type='text/javascript' src="js/common.js"></script>
 		<script type='text/javascript' src="js/jquery-2.0.3.min.js"></script>
 		<script type='text/javascript' src="js/c200814.js"></script>
 		<style>
@@ -38,7 +39,7 @@ a.moreGame {
 }
 
 a.irestartBtn {
-	width: 40%;
+	width: 100%;
 	padding-top: 30%;
 	position: absolute;
 	bottom: 16%;
@@ -98,15 +99,15 @@ html {
 		<div id="overlayMask" style="display:none;"></div>
 		
 		<script language=javascript>
-		var mebtnopenurl = 'http://game.3gjj.cn/index.html';
-var thegameurl ="http://game.3gjj.cn/games/znm/"; 
-var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&idx=1&sn=7a0b78f1e16e00f2ae5bbfc885596d62#rd";
-		window.shareData = {
-		        "imgUrl": "http://mmbiz.qpic.cn/mmbiz/2zpp2iaH4HWGfZsia600gXXlFuZt8TiaEznCicB12RiaoIyn6Pvdufqh3hibUDAxGsAlaricVgWxtY0UbVqU7ibjEL3ZJQ/640",
-		        "timeLineLink":thegameurl,
-		        "tTitle": "Spin It",
-		        "tContent": "轻松休闲的消除类游戏，小伙伴们快来体验一下！"
-		};
+// 		var mebtnopenurl = 'http://game.3gjj.cn/index.html';
+// var thegameurl ="http://game.3gjj.cn/games/znm/"; 
+// var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&idx=1&sn=7a0b78f1e16e00f2ae5bbfc885596d62#rd";
+// 		window.shareData = {
+// 		        "imgUrl": "http://mmbiz.qpic.cn/mmbiz/2zpp2iaH4HWGfZsia600gXXlFuZt8TiaEznCicB12RiaoIyn6Pvdufqh3hibUDAxGsAlaricVgWxtY0UbVqU7ibjEL3ZJQ/640",
+// 		        "timeLineLink":thegameurl,
+// 		        "tTitle": "Spin It",
+// 		        "tContent": "轻松休闲的消除类游戏，小伙伴们快来体验一下！"
+// 		};
 				
 		function goHome(){
 			window.location=mebtnopenurl;
@@ -131,28 +132,28 @@ var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&
 		}
 		function hideAd(){
 		}
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+		// document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 		    
-		    WeixinJSBridge.on('menu:share:appmessage', function(argv) {
-		        WeixinJSBridge.invoke('sendAppMessage', {
-		            "img_url": window.shareData.imgUrl,
-		            "link": window.shareData.timeLineLink,
-		            "desc": window.shareData.tContent,
-		            "title": window.shareData.tTitle
-		        }, onShareComplete);
-		    });
+		//     // WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+		//     //     WeixinJSBridge.invoke('sendAppMessage', {
+		//     //         "img_url": window.shareData.imgUrl,
+		//     //         "link": window.shareData.timeLineLink,
+		//     //         "desc": window.shareData.tContent,
+		//     //         "title": window.shareData.tTitle
+		//     //     }, onShareComplete);
+		//     // });
 
-		    WeixinJSBridge.on('menu:share:timeline', function(argv) {
-		        WeixinJSBridge.invoke('shareTimeline', {
-		            "img_url": window.shareData.imgUrl,
-		            "img_width": "640",
-		            "img_height": "640",
-		            "link": window.shareData.timeLineLink,
-		            "desc": window.shareData.tContent,
-		            "title": window.shareData.tTitle
-		        }, onShareComplete);
-		    });
-		}, false);
+		//     // WeixinJSBridge.on('menu:share:timeline', function(argv) {
+		//     //     WeixinJSBridge.invoke('shareTimeline', {
+		//     //         "img_url": window.shareData.imgUrl,
+		//     //         "img_width": "640",
+		//     //         "img_height": "640",
+		//     //         "link": window.shareData.timeLineLink,
+		//     //         "desc": window.shareData.tContent,
+		//     //         "title": window.shareData.tTitle
+		//     //     }, onShareComplete);
+		//     // });
+		// }, false);
 		</script>
 		<div id=share style="display: none">
 			<img width="100%" src="share.png"
@@ -160,9 +161,9 @@ var guanzhuurl ="http://mp.weixin.qq.com/s?__biz=MzA4MDIwMzg2MQ==&mid=202110507&
 				ontouchstart="document.getElementById('share').style.display='none';" />
 		</div>
 		<script type="text/javascript">
-            var myData = { gameid: "dsdy" };
-			 var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
-			window.shareData.timeLineLink = thegameurl ;
+   //          var myData = { gameid: "dsdy" };
+			//  var domain = ["oixm.cn", "hiemma.cn", "peagame.net"][parseInt(Math.random() * 3)];
+			// window.shareData.timeLineLink = thegameurl ;
 			function dp_submitScore(score){
 						// myData.score = parseInt(score);
 						// myData.scoreName ="获得"+score+"分";		

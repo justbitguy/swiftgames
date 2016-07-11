@@ -606,7 +606,7 @@ function resumeGame() {
 	startTime = Date.now();
 	setTimeout(function() {
 		1 != gameState && 2 != gameState || $("#helpScreen").is(":visible") || $(".helpText").fadeOut(150, "linear")
-	}, 7E3);
+	}, 1E3);
 	checkVisualElements()
 }
 
@@ -822,13 +822,13 @@ function render() {
 }
 
 function renderBeginningText() {
-	renderText(trueCanvas.width / 2 + 1.5 * settings.scale, trueCanvas.height / 2 - 208 * settings.scale-20, 35, "#2c3e50", "Control", "35px 微软雅黑");
-	renderText(trueCanvas.width / 2 - 85 * settings.scale, trueCanvas.height / 2 - 169 * settings.scale, 20, "#2c3e50", "Spin:", "20px 微软雅黑");
-	renderText(trueCanvas.width / 2 - 21 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10, 14, "#2c3e50", "Left", "14px 微软雅黑");
-	renderText(trueCanvas.width / 2 + 25 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10,14, "#2c3e50", "Right", "14px 微软雅黑");
+	renderText(trueCanvas.width / 2 + 1.5 * settings.scale, trueCanvas.height / 2 - 208 * settings.scale-20, 35, "#2c3e50", GAME_TEXT.control, "35px 微软雅黑");
+	renderText(trueCanvas.width / 2 - 85 * settings.scale, trueCanvas.height / 2 - 169 * settings.scale, 20, "#2c3e50", GAME_TEXT.spin, "20px 微软雅黑");
+	renderText(trueCanvas.width / 2 - 21 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10, 14, "#2c3e50", GAME_TEXT.left, "14px 微软雅黑");
+	renderText(trueCanvas.width / 2 + 25 * settings.scale, trueCanvas.height / 2 - 141 * settings.scale+10,14, "#2c3e50", GAME_TEXT.right, "14px 微软雅黑");
 	/*加提示语*/
 	renderText(trueCanvas.width / 2 + 0 * settings.scale, trueCanvas.height / 2 - 121 * settings.scale+20,
-		16, "#2c3e50", "Touch screen left/right side, spin the hexagon to left/right", "16px 微软雅黑");
+		16, "#2c3e50", GAME_TEXT.prompt, "16px 微软雅黑");
 	drawKey("right", trueCanvas.width / 2 + 23 * settings.scale - 17.5 * settings.scale, trueCanvas.height / 2 - 195 * settings.scale);
 	drawKey("left", trueCanvas.width / 2 - 23 * settings.scale - 17.5 * settings.scale, trueCanvas.height / 2 - 195 * settings.scale)
 }
@@ -971,9 +971,9 @@ function drawScoreboard() {
 	var a = 50,
 		b = String(score);
 	6 == b.length ? a = 43 : 7 == b.length ? a = 35 : 8 == b.length ? a = 31 : 9 == b.length && (a = 27);
-	0 === gameState ? (renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "Spin It"), renderText(trueCanvas.width /
-		2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy + 100 * settings.scale, 20, "rgb(44,62,80)", "Start!"),ctx.drawImage(doudouIcon,0,0,266,120,trueCanvas.width / 2 -120 * settings.scale, trueCanvas.height / 2 +250 * settings.scale,266*settings.scale,120*settings.scale)) : (0 != gameState && 0 < textOpacity && (textOpacity -= .05, renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", "Spin It"), renderText(trueCanvas.width / 2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy +
-		100 * settings.scale, 20, "rgb(44,62,80)", "Start!")), ctx.globalAlpha = scoreOpacity, renderText(trueCanvas.width / 2 + gdx, trueCanvas.height / 2 + gdy, a, "rgb(236, 240, 241)", score));
+	0 === gameState ? (renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), /*renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", GAME_TEXT.title),*/ renderText(trueCanvas.width /
+		2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy + 100 * settings.scale, 20, "rgb(44,62,80)", GAME_TEXT.start),ctx.drawImage(doudouIcon,0,0,266,120,trueCanvas.width / 2 -120 * settings.scale, trueCanvas.height / 2 +250 * settings.scale,266*settings.scale,120*settings.scale)) : (0 != gameState && 0 < textOpacity && (textOpacity -= .05, renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy, 60, "rgb(236, 240, 241)", String.fromCharCode("0xf04b"), "px FontAwesome"), /*renderText(trueCanvas.width / 2 + gdx + 6 * settings.scale, trueCanvas.height / 2 + gdy - 170 * settings.scale, 150, "#2c3e50", GAME_TEXT.title),*/ renderText(trueCanvas.width / 2 + gdx + 5 * settings.scale, trueCanvas.height / 2 + gdy +
+		100 * settings.scale, 20, "rgb(44,62,80)", GAME_TEXT.start)), ctx.globalAlpha = scoreOpacity, renderText(trueCanvas.width / 2 + gdx, trueCanvas.height / 2 + gdy, a, "rgb(236, 240, 241)", score));
 	ctx.globalAlpha = 1
 }
 
@@ -1011,7 +1011,7 @@ function showText(a) {
 	if ("gameover" == a) {
 		var d = 1,
 			c, e;
-		b.gameover += "<div class='unselectable centeredSubHeader endBtn'><a href=\"###\" class='moreGame'></a><a href=\"###\" class=\"irestartBtn\" ></a></div>";
+		b.gameover += "<div class='unselectable centeredSubHeader endBtn'><a href=\"###\" class=\"irestartBtn\" >" + GAME_TEXT.restart + "</a></div>";
 		if (d)
 			for (c = 0; c < highscores.length; c++) 0 !== highscores[c] && (d = 0)
 	}
