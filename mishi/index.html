@@ -36,7 +36,6 @@ function updateShareScore(bestScore) {
 </script>
 <script type="text/javascript" src="jsgamemin.js"></script>
 <script type="text/javascript" src="spaceman.min.js"></script>
-<title>密室逃脱</title>
 <style>
 	body{margin:0px; background-color:#434243; color:#6A6A6A;}
 	.bandiv{float:left; width:100%; background-color:#DBD1BB;}
@@ -149,6 +148,7 @@ function updateShareScore(bestScore) {
 }
 </style>
 <script>
+document.title = GameLang == "en" ? "Escape" : "密室逃脱";
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
 	// WeixinJSBridge.call('showOptionMenu');
 });
