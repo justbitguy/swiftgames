@@ -483,7 +483,7 @@ var btGame;
 var zhLocale = "zh"; 
 var enLocale = "en"; 
 var zhTitle = "歡樂釣魚";
-var enTitle = "Happy Finishing";
+var enTitle = "Happy Fish";
 
 
 var NativeMsg = {
