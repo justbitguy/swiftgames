@@ -7060,7 +7060,7 @@ var isSmall, remote = {
 				src: "./" + k + "/gameBackground3.jpg",
 				id: "gameBackground3"
 			}, {
-				src: "./" + k + "/splash.jpg",
+				src: "./" + k + "/" + imageSrc.splash,
 				id: "splash"
 			}, {
 				src: "./" + k + "/paper.png",
