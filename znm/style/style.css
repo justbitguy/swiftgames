@@ -245,7 +245,7 @@ and (max-device-width : 580px) {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url("fonts/roboto.woff") format('woff');
+    /*src: local('Roboto Regular'), local('Roboto-Regular'), url("fonts/roboto.woff") format('woff');*/
 }
 
 @font-face {
